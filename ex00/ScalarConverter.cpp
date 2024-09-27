@@ -100,7 +100,7 @@ void ScalarConverter::printInt()
 void ScalarConverter::printFloat()
 {
 	cout << "float: ";
-	if (_double < -numeric_limits<float>::min() || _double > numeric_limits<float>::max() || _type == TYPE_UNKNOWN)
+	if (_double < -numeric_limits<float>::max() || _double > numeric_limits<float>::max() || _type == TYPE_UNKNOWN)
 		cout << "impossible";
 	else {
 		_float = static_cast<float>(_double);
